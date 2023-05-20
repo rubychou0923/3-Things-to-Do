@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96C85D5B2A18CD9400D5AAB4 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D582A18CD9400D5AAB4 /* Counter.swift */; };
-		96C85D5C2A18CD9400D5AAB4 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D582A18CD9400D5AAB4 /* Counter.swift */; };
-		96C85D5D2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */; };
-		96C85D5E2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */; };
-		96C85D5F2A18CD9400D5AAB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */; };
-		96C85D602A18CD9400D5AAB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */; };
+		96CA3A652A18FCEC00173774 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA3A612A18FCEC00173774 /* SessionDelegator.swift */; };
+		96CA3A662A18FCEC00173774 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA3A622A18FCEC00173774 /* Counter.swift */; };
+		96CA3A672A18FCEC00173774 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA3A642A18FCEC00173774 /* ContentView.swift */; };
 		96CB49492A18699B00584144 /* __Things_ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49482A18699B00584144 /* __Things_ToDoApp.swift */; };
 		96CB494D2A1869A400584144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB494C2A1869A400584144 /* Assets.xcassets */; };
 		96CB49502A1869A400584144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB494F2A1869A400584144 /* Preview Assets.xcassets */; };
@@ -105,9 +102,10 @@
 
 /* Begin PBXFileReference section */
 		96C85D572A18CD9300D5AAB4 /* 3 Things ToDo WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "3 Things ToDo WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
-		96C85D582A18CD9400D5AAB4 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Counter.swift; path = "../../SwiftUIWatchConnectivity-main/Shared/Counter.swift"; sourceTree = "<group>"; };
-		96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionDelegator.swift; path = "../../SwiftUIWatchConnectivity-main/Shared/SessionDelegator.swift"; sourceTree = "<group>"; };
-		96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../SwiftUIWatchConnectivity-main/Shared/ContentView.swift"; sourceTree = "<group>"; };
+		96CA3A612A18FCEC00173774 /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
+		96CA3A622A18FCEC00173774 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		96CA3A632A18FCEC00173774 /* 3 Things ToDo WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "3 Things ToDo WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		96CA3A642A18FCEC00173774 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96CB49452A18699B00584144 /* 3 Things ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3 Things ToDo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB49482A18699B00584144 /* __Things_ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoApp.swift; sourceTree = "<group>"; };
 		96CB494C2A1869A400584144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -184,9 +182,10 @@
 		96C85D562A18CD7800D5AAB4 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */,
-				96C85D582A18CD9400D5AAB4 /* Counter.swift */,
-				96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */,
+				96CA3A632A18FCEC00173774 /* 3 Things ToDo WatchKit App-Bridging-Header.h */,
+				96CA3A642A18FCEC00173774 /* ContentView.swift */,
+				96CA3A622A18FCEC00173774 /* Counter.swift */,
+				96CA3A612A18FCEC00173774 /* SessionDelegator.swift */,
 				96C85D572A18CD9300D5AAB4 /* 3 Things ToDo WatchKit App-Bridging-Header.h */,
 			);
 			path = Shared;
@@ -556,10 +555,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96C85D5D2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */,
-				96C85D5F2A18CD9400D5AAB4 /* ContentView.swift in Sources */,
+				96CA3A652A18FCEC00173774 /* SessionDelegator.swift in Sources */,
 				96CB49492A18699B00584144 /* __Things_ToDoApp.swift in Sources */,
-				96C85D5B2A18CD9400D5AAB4 /* Counter.swift in Sources */,
+				96CA3A672A18FCEC00173774 /* ContentView.swift in Sources */,
+				96CA3A662A18FCEC00173774 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,9 +584,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CB497E2A1869A600584144 /* NotificationController.swift in Sources */,
-				96C85D602A18CD9400D5AAB4 /* ContentView.swift in Sources */,
-				96C85D5C2A18CD9400D5AAB4 /* Counter.swift in Sources */,
-				96C85D5E2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */,
 				96CB49822A1869A600584144 /* ComplicationController.swift in Sources */,
 				96CB497A2A1869A600584144 /* __Things_ToDoApp.swift in Sources */,
 				96CB49802A1869A600584144 /* NotificationView.swift in Sources */,
