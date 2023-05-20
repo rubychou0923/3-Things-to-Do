@@ -1,0 +1,1165 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96CB49492A18699B00584144 /* __Things_ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49482A18699B00584144 /* __Things_ToDoApp.swift */; };
+		96CB494B2A18699B00584144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB494A2A18699B00584144 /* ContentView.swift */; };
+		96CB494D2A1869A400584144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB494C2A1869A400584144 /* Assets.xcassets */; };
+		96CB49502A1869A400584144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB494F2A1869A400584144 /* Preview Assets.xcassets */; };
+		96CB495A2A1869A500584144 /* __Things_ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49592A1869A500584144 /* __Things_ToDoTests.swift */; };
+		96CB49642A1869A500584144 /* __Things_ToDoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49632A1869A500584144 /* __Things_ToDoUITests.swift */; };
+		96CB49662A1869A500584144 /* __Things_ToDoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49652A1869A500584144 /* __Things_ToDoUITestsLaunchTests.swift */; };
+		96CB496A2A1869A500584144 /* 3 Things ToDo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 96CB49692A1869A500584144 /* 3 Things ToDo WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		96CB496F2A1869A600584144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB496E2A1869A600584144 /* Assets.xcassets */; };
+		96CB49752A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96CB49742A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		96CB497A2A1869A600584144 /* __Things_ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49792A1869A600584144 /* __Things_ToDoApp.swift */; };
+		96CB497C2A1869A600584144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB497B2A1869A600584144 /* ContentView.swift */; };
+		96CB497E2A1869A600584144 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB497D2A1869A600584144 /* NotificationController.swift */; };
+		96CB49802A1869A600584144 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB497F2A1869A600584144 /* NotificationView.swift */; };
+		96CB49822A1869A600584144 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49812A1869A600584144 /* ComplicationController.swift */; };
+		96CB49842A1869A800584144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB49832A1869A800584144 /* Assets.xcassets */; };
+		96CB49872A1869A800584144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB49862A1869A800584144 /* Preview Assets.xcassets */; };
+		96CB49932A1869A800584144 /* __Things_ToDo_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49922A1869A800584144 /* __Things_ToDo_WatchKit_AppTests.swift */; };
+		96CB499D2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB499C2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITests.swift */; };
+		96CB499F2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB499E2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96CB49562A1869A500584144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB493D2A18699B00584144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB49442A18699B00584144;
+			remoteInfo = "3 Things ToDo";
+		};
+		96CB49602A1869A500584144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB493D2A18699B00584144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB49442A18699B00584144;
+			remoteInfo = "3 Things ToDo";
+		};
+		96CB496B2A1869A500584144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB493D2A18699B00584144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB49682A1869A500584144;
+			remoteInfo = "3 Things ToDo WatchKit App";
+		};
+		96CB49762A1869A600584144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB493D2A18699B00584144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB49732A1869A600584144;
+			remoteInfo = "3 Things ToDo WatchKit Extension";
+		};
+		96CB498F2A1869A800584144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB493D2A18699B00584144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB49732A1869A600584144;
+			remoteInfo = "3 Things ToDo WatchKit Extension";
+		};
+		96CB49992A1869A800584144 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96CB493D2A18699B00584144 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96CB49682A1869A500584144;
+			remoteInfo = "3 Things ToDo WatchKit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		96CB49A52A1869A800584144 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				96CB49752A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49A92A1869A800584144 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				96CB496A2A1869A500584144 /* 3 Things ToDo WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		96CB49452A18699B00584144 /* 3 Things ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3 Things ToDo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB49482A18699B00584144 /* __Things_ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoApp.swift; sourceTree = "<group>"; };
+		96CB494A2A18699B00584144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96CB494C2A1869A400584144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96CB494F2A1869A400584144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96CB49552A1869A500584144 /* 3 Things ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3 Things ToDoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB49592A1869A500584144 /* __Things_ToDoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoTests.swift; sourceTree = "<group>"; };
+		96CB495F2A1869A500584144 /* 3 Things ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3 Things ToDoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB49632A1869A500584144 /* __Things_ToDoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoUITests.swift; sourceTree = "<group>"; };
+		96CB49652A1869A500584144 /* __Things_ToDoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96CB49692A1869A500584144 /* 3 Things ToDo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3 Things ToDo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB496E2A1869A600584144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96CB49742A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "3 Things ToDo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB49792A1869A600584144 /* __Things_ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoApp.swift; sourceTree = "<group>"; };
+		96CB497B2A1869A600584144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96CB497D2A1869A600584144 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		96CB497F2A1869A600584144 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		96CB49812A1869A600584144 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		96CB49832A1869A800584144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96CB49862A1869A800584144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96CB49882A1869A800584144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CB49892A1869A800584144 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		96CB498E2A1869A800584144 /* 3 Things ToDo WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3 Things ToDo WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB49922A1869A800584144 /* __Things_ToDo_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDo_WatchKit_AppTests.swift; sourceTree = "<group>"; };
+		96CB49982A1869A800584144 /* 3 Things ToDo WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3 Things ToDo WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96CB499C2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDo_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
+		96CB499E2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDo_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96CB49422A18699B00584144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49522A1869A500584144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB495C2A1869A500584144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49712A1869A600584144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB498B2A1869A800584144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49952A1869A800584144 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96CB493C2A18699B00584144 = {
+			isa = PBXGroup;
+			children = (
+				96CB49472A18699B00584144 /* 3 Things ToDo */,
+				96CB49582A1869A500584144 /* 3 Things ToDoTests */,
+				96CB49622A1869A500584144 /* 3 Things ToDoUITests */,
+				96CB496D2A1869A500584144 /* 3 Things ToDo WatchKit App */,
+				96CB49782A1869A600584144 /* 3 Things ToDo WatchKit Extension */,
+				96CB49912A1869A800584144 /* 3 Things ToDo WatchKit AppTests */,
+				96CB499B2A1869A800584144 /* 3 Things ToDo WatchKit AppUITests */,
+				96CB49462A18699B00584144 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96CB49462A18699B00584144 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96CB49452A18699B00584144 /* 3 Things ToDo.app */,
+				96CB49552A1869A500584144 /* 3 Things ToDoTests.xctest */,
+				96CB495F2A1869A500584144 /* 3 Things ToDoUITests.xctest */,
+				96CB49692A1869A500584144 /* 3 Things ToDo WatchKit App.app */,
+				96CB49742A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex */,
+				96CB498E2A1869A800584144 /* 3 Things ToDo WatchKit AppTests.xctest */,
+				96CB49982A1869A800584144 /* 3 Things ToDo WatchKit AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96CB49472A18699B00584144 /* 3 Things ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				96CB49482A18699B00584144 /* __Things_ToDoApp.swift */,
+				96CB494A2A18699B00584144 /* ContentView.swift */,
+				96CB494C2A1869A400584144 /* Assets.xcassets */,
+				96CB494E2A1869A400584144 /* Preview Content */,
+			);
+			path = "3 Things ToDo";
+			sourceTree = "<group>";
+		};
+		96CB494E2A1869A400584144 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				96CB494F2A1869A400584144 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96CB49582A1869A500584144 /* 3 Things ToDoTests */ = {
+			isa = PBXGroup;
+			children = (
+				96CB49592A1869A500584144 /* __Things_ToDoTests.swift */,
+			);
+			path = "3 Things ToDoTests";
+			sourceTree = "<group>";
+		};
+		96CB49622A1869A500584144 /* 3 Things ToDoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96CB49632A1869A500584144 /* __Things_ToDoUITests.swift */,
+				96CB49652A1869A500584144 /* __Things_ToDoUITestsLaunchTests.swift */,
+			);
+			path = "3 Things ToDoUITests";
+			sourceTree = "<group>";
+		};
+		96CB496D2A1869A500584144 /* 3 Things ToDo WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				96CB496E2A1869A600584144 /* Assets.xcassets */,
+			);
+			path = "3 Things ToDo WatchKit App";
+			sourceTree = "<group>";
+		};
+		96CB49782A1869A600584144 /* 3 Things ToDo WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				96CB49792A1869A600584144 /* __Things_ToDoApp.swift */,
+				96CB497B2A1869A600584144 /* ContentView.swift */,
+				96CB497D2A1869A600584144 /* NotificationController.swift */,
+				96CB497F2A1869A600584144 /* NotificationView.swift */,
+				96CB49812A1869A600584144 /* ComplicationController.swift */,
+				96CB49832A1869A800584144 /* Assets.xcassets */,
+				96CB49882A1869A800584144 /* Info.plist */,
+				96CB49892A1869A800584144 /* PushNotificationPayload.apns */,
+				96CB49852A1869A800584144 /* Preview Content */,
+			);
+			path = "3 Things ToDo WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		96CB49852A1869A800584144 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				96CB49862A1869A800584144 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96CB49912A1869A800584144 /* 3 Things ToDo WatchKit AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				96CB49922A1869A800584144 /* __Things_ToDo_WatchKit_AppTests.swift */,
+			);
+			path = "3 Things ToDo WatchKit AppTests";
+			sourceTree = "<group>";
+		};
+		96CB499B2A1869A800584144 /* 3 Things ToDo WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96CB499C2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITests.swift */,
+				96CB499E2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITestsLaunchTests.swift */,
+			);
+			path = "3 Things ToDo WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96CB49442A18699B00584144 /* 3 Things ToDo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB49AA2A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo" */;
+			buildPhases = (
+				96CB49412A18699B00584144 /* Sources */,
+				96CB49422A18699B00584144 /* Frameworks */,
+				96CB49432A18699B00584144 /* Resources */,
+				96CB49A92A1869A800584144 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB496C2A1869A500584144 /* PBXTargetDependency */,
+			);
+			name = "3 Things ToDo";
+			productName = "3 Things ToDo";
+			productReference = 96CB49452A18699B00584144 /* 3 Things ToDo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96CB49542A1869A500584144 /* 3 Things ToDoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB49AD2A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDoTests" */;
+			buildPhases = (
+				96CB49512A1869A500584144 /* Sources */,
+				96CB49522A1869A500584144 /* Frameworks */,
+				96CB49532A1869A500584144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB49572A1869A500584144 /* PBXTargetDependency */,
+			);
+			name = "3 Things ToDoTests";
+			productName = "3 Things ToDoTests";
+			productReference = 96CB49552A1869A500584144 /* 3 Things ToDoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96CB495E2A1869A500584144 /* 3 Things ToDoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB49B02A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDoUITests" */;
+			buildPhases = (
+				96CB495B2A1869A500584144 /* Sources */,
+				96CB495C2A1869A500584144 /* Frameworks */,
+				96CB495D2A1869A500584144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB49612A1869A500584144 /* PBXTargetDependency */,
+			);
+			name = "3 Things ToDoUITests";
+			productName = "3 Things ToDoUITests";
+			productReference = 96CB495F2A1869A500584144 /* 3 Things ToDoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		96CB49682A1869A500584144 /* 3 Things ToDo WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB49A62A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit App" */;
+			buildPhases = (
+				96CB49672A1869A500584144 /* Resources */,
+				96CB49A52A1869A800584144 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB49772A1869A600584144 /* PBXTargetDependency */,
+			);
+			name = "3 Things ToDo WatchKit App";
+			productName = "3 Things ToDo WatchKit App";
+			productReference = 96CB49692A1869A500584144 /* 3 Things ToDo WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		96CB49732A1869A600584144 /* 3 Things ToDo WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB49A22A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit Extension" */;
+			buildPhases = (
+				96CB49702A1869A600584144 /* Sources */,
+				96CB49712A1869A600584144 /* Frameworks */,
+				96CB49722A1869A600584144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "3 Things ToDo WatchKit Extension";
+			productName = "3 Things ToDo WatchKit Extension";
+			productReference = 96CB49742A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		96CB498D2A1869A800584144 /* 3 Things ToDo WatchKit AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB49B32A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit AppTests" */;
+			buildPhases = (
+				96CB498A2A1869A800584144 /* Sources */,
+				96CB498B2A1869A800584144 /* Frameworks */,
+				96CB498C2A1869A800584144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB49902A1869A800584144 /* PBXTargetDependency */,
+			);
+			name = "3 Things ToDo WatchKit AppTests";
+			productName = "3 Things ToDo WatchKit AppTests";
+			productReference = 96CB498E2A1869A800584144 /* 3 Things ToDo WatchKit AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96CB49972A1869A800584144 /* 3 Things ToDo WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96CB49B62A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit AppUITests" */;
+			buildPhases = (
+				96CB49942A1869A800584144 /* Sources */,
+				96CB49952A1869A800584144 /* Frameworks */,
+				96CB49962A1869A800584144 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96CB499A2A1869A800584144 /* PBXTargetDependency */,
+			);
+			name = "3 Things ToDo WatchKit AppUITests";
+			productName = "3 Things ToDo WatchKit AppUITests";
+			productReference = 96CB49982A1869A800584144 /* 3 Things ToDo WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96CB493D2A18699B00584144 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					96CB49442A18699B00584144 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					96CB49542A1869A500584144 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 96CB49442A18699B00584144;
+					};
+					96CB495E2A1869A500584144 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 96CB49442A18699B00584144;
+					};
+					96CB49682A1869A500584144 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					96CB49732A1869A600584144 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					96CB498D2A1869A800584144 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 96CB49732A1869A600584144;
+					};
+					96CB49972A1869A800584144 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 96CB49682A1869A500584144;
+					};
+				};
+			};
+			buildConfigurationList = 96CB49402A18699B00584144 /* Build configuration list for PBXProject "3 Things ToDo" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96CB493C2A18699B00584144;
+			productRefGroup = 96CB49462A18699B00584144 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96CB49442A18699B00584144 /* 3 Things ToDo */,
+				96CB49542A1869A500584144 /* 3 Things ToDoTests */,
+				96CB495E2A1869A500584144 /* 3 Things ToDoUITests */,
+				96CB49682A1869A500584144 /* 3 Things ToDo WatchKit App */,
+				96CB49732A1869A600584144 /* 3 Things ToDo WatchKit Extension */,
+				96CB498D2A1869A800584144 /* 3 Things ToDo WatchKit AppTests */,
+				96CB49972A1869A800584144 /* 3 Things ToDo WatchKit AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96CB49432A18699B00584144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB49502A1869A400584144 /* Preview Assets.xcassets in Resources */,
+				96CB494D2A1869A400584144 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49532A1869A500584144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB495D2A1869A500584144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49672A1869A500584144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB496F2A1869A600584144 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49722A1869A600584144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB49872A1869A800584144 /* Preview Assets.xcassets in Resources */,
+				96CB49842A1869A800584144 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB498C2A1869A800584144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49962A1869A800584144 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96CB49412A18699B00584144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB494B2A18699B00584144 /* ContentView.swift in Sources */,
+				96CB49492A18699B00584144 /* __Things_ToDoApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49512A1869A500584144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB495A2A1869A500584144 /* __Things_ToDoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB495B2A1869A500584144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB49642A1869A500584144 /* __Things_ToDoUITests.swift in Sources */,
+				96CB49662A1869A500584144 /* __Things_ToDoUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49702A1869A600584144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB497E2A1869A600584144 /* NotificationController.swift in Sources */,
+				96CB497C2A1869A600584144 /* ContentView.swift in Sources */,
+				96CB49822A1869A600584144 /* ComplicationController.swift in Sources */,
+				96CB497A2A1869A600584144 /* __Things_ToDoApp.swift in Sources */,
+				96CB49802A1869A600584144 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB498A2A1869A800584144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB49932A1869A800584144 /* __Things_ToDo_WatchKit_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96CB49942A1869A800584144 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96CB499F2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITestsLaunchTests.swift in Sources */,
+				96CB499D2A1869A800584144 /* __Things_ToDo_WatchKit_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96CB49572A1869A500584144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB49442A18699B00584144 /* 3 Things ToDo */;
+			targetProxy = 96CB49562A1869A500584144 /* PBXContainerItemProxy */;
+		};
+		96CB49612A1869A500584144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB49442A18699B00584144 /* 3 Things ToDo */;
+			targetProxy = 96CB49602A1869A500584144 /* PBXContainerItemProxy */;
+		};
+		96CB496C2A1869A500584144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB49682A1869A500584144 /* 3 Things ToDo WatchKit App */;
+			targetProxy = 96CB496B2A1869A500584144 /* PBXContainerItemProxy */;
+		};
+		96CB49772A1869A600584144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB49732A1869A600584144 /* 3 Things ToDo WatchKit Extension */;
+			targetProxy = 96CB49762A1869A600584144 /* PBXContainerItemProxy */;
+		};
+		96CB49902A1869A800584144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB49732A1869A600584144 /* 3 Things ToDo WatchKit Extension */;
+			targetProxy = 96CB498F2A1869A800584144 /* PBXContainerItemProxy */;
+		};
+		96CB499A2A1869A800584144 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96CB49682A1869A500584144 /* 3 Things ToDo WatchKit App */;
+			targetProxy = 96CB49992A1869A800584144 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		96CB49A02A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96CB49A12A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		96CB49A32A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"3 Things ToDo WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "3 Things ToDo WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "3 Things ToDo WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		96CB49A42A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"3 Things ToDo WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "3 Things ToDo WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "3 Things ToDo WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		96CB49A72A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = __Things_ToDo_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "3 Things ToDo WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Freedom.--Things-ToDo";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		96CB49A82A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = __Things_ToDo_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = "3 Things ToDo WatchKit App";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Freedom.--Things-ToDo";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		96CB49AB2A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"3 Things ToDo/Preview Content\"";
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96CB49AC2A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"3 Things ToDo/Preview Content\"";
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96CB49AE2A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3 Things ToDo.app/3 Things ToDo";
+			};
+			name = Debug;
+		};
+		96CB49AF2A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3 Things ToDo.app/3 Things ToDo";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96CB49B12A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "3 Things ToDo";
+			};
+			name = Debug;
+		};
+		96CB49B22A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "3 Things ToDo";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96CB49B42A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3 Things ToDo WatchKit Extension.appex/3 Things ToDo WatchKit Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		96CB49B52A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo-WatchKit-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3 Things ToDo WatchKit Extension.appex/3 Things ToDo WatchKit Extension";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		96CB49B72A1869A800584144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "3 Things ToDo WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		96CB49B82A1869A800584144 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8V59PTG8G3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "3 Things ToDo WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96CB49402A18699B00584144 /* Build configuration list for PBXProject "3 Things ToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49A02A1869A800584144 /* Debug */,
+				96CB49A12A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB49A22A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49A32A1869A800584144 /* Debug */,
+				96CB49A42A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB49A62A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49A72A1869A800584144 /* Debug */,
+				96CB49A82A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB49AA2A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49AB2A1869A800584144 /* Debug */,
+				96CB49AC2A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB49AD2A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49AE2A1869A800584144 /* Debug */,
+				96CB49AF2A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB49B02A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49B12A1869A800584144 /* Debug */,
+				96CB49B22A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB49B32A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49B42A1869A800584144 /* Debug */,
+				96CB49B52A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96CB49B62A1869A800584144 /* Build configuration list for PBXNativeTarget "3 Things ToDo WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96CB49B72A1869A800584144 /* Debug */,
+				96CB49B82A1869A800584144 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96CB493D2A18699B00584144 /* Project object */;
+}
