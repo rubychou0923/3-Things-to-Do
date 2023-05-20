@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96C85D5B2A18CD9400D5AAB4 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D582A18CD9400D5AAB4 /* Counter.swift */; };
+		96C85D5C2A18CD9400D5AAB4 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D582A18CD9400D5AAB4 /* Counter.swift */; };
+		96C85D5D2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */; };
+		96C85D5E2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */; };
+		96C85D5F2A18CD9400D5AAB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */; };
+		96C85D602A18CD9400D5AAB4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */; };
 		96CB49492A18699B00584144 /* __Things_ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49482A18699B00584144 /* __Things_ToDoApp.swift */; };
-		96CB494B2A18699B00584144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB494A2A18699B00584144 /* ContentView.swift */; };
 		96CB494D2A1869A400584144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB494C2A1869A400584144 /* Assets.xcassets */; };
 		96CB49502A1869A400584144 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB494F2A1869A400584144 /* Preview Assets.xcassets */; };
 		96CB495A2A1869A500584144 /* __Things_ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49592A1869A500584144 /* __Things_ToDoTests.swift */; };
@@ -18,7 +23,6 @@
 		96CB496F2A1869A600584144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96CB496E2A1869A600584144 /* Assets.xcassets */; };
 		96CB49752A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 96CB49742A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		96CB497A2A1869A600584144 /* __Things_ToDoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49792A1869A600584144 /* __Things_ToDoApp.swift */; };
-		96CB497C2A1869A600584144 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB497B2A1869A600584144 /* ContentView.swift */; };
 		96CB497E2A1869A600584144 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB497D2A1869A600584144 /* NotificationController.swift */; };
 		96CB49802A1869A600584144 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB497F2A1869A600584144 /* NotificationView.swift */; };
 		96CB49822A1869A600584144 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CB49812A1869A600584144 /* ComplicationController.swift */; };
@@ -100,9 +104,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		96C85D572A18CD9300D5AAB4 /* 3 Things ToDo WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "3 Things ToDo WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		96C85D582A18CD9400D5AAB4 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Counter.swift; path = "../../SwiftUIWatchConnectivity-main/Shared/Counter.swift"; sourceTree = "<group>"; };
+		96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SessionDelegator.swift; path = "../../SwiftUIWatchConnectivity-main/Shared/SessionDelegator.swift"; sourceTree = "<group>"; };
+		96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "../../SwiftUIWatchConnectivity-main/Shared/ContentView.swift"; sourceTree = "<group>"; };
 		96CB49452A18699B00584144 /* 3 Things ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3 Things ToDo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB49482A18699B00584144 /* __Things_ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoApp.swift; sourceTree = "<group>"; };
-		96CB494A2A18699B00584144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96CB494C2A1869A400584144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96CB494F2A1869A400584144 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96CB49552A1869A500584144 /* 3 Things ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3 Things ToDoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,7 +121,6 @@
 		96CB496E2A1869A600584144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96CB49742A1869A600584144 /* 3 Things ToDo WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "3 Things ToDo WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96CB49792A1869A600584144 /* __Things_ToDoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __Things_ToDoApp.swift; sourceTree = "<group>"; };
-		96CB497B2A1869A600584144 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		96CB497D2A1869A600584144 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		96CB497F2A1869A600584144 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		96CB49812A1869A600584144 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -175,9 +181,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96C85D562A18CD7800D5AAB4 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				96C85D5A2A18CD9400D5AAB4 /* ContentView.swift */,
+				96C85D582A18CD9400D5AAB4 /* Counter.swift */,
+				96C85D592A18CD9400D5AAB4 /* SessionDelegator.swift */,
+				96C85D572A18CD9300D5AAB4 /* 3 Things ToDo WatchKit App-Bridging-Header.h */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		96CB493C2A18699B00584144 = {
 			isa = PBXGroup;
 			children = (
+				96C85D562A18CD7800D5AAB4 /* Shared */,
 				96CB49472A18699B00584144 /* 3 Things ToDo */,
 				96CB49582A1869A500584144 /* 3 Things ToDoTests */,
 				96CB49622A1869A500584144 /* 3 Things ToDoUITests */,
@@ -207,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				96CB49482A18699B00584144 /* __Things_ToDoApp.swift */,
-				96CB494A2A18699B00584144 /* ContentView.swift */,
 				96CB494C2A1869A400584144 /* Assets.xcassets */,
 				96CB494E2A1869A400584144 /* Preview Content */,
 			);
@@ -251,7 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				96CB49792A1869A600584144 /* __Things_ToDoApp.swift */,
-				96CB497B2A1869A600584144 /* ContentView.swift */,
 				96CB497D2A1869A600584144 /* NotificationController.swift */,
 				96CB497F2A1869A600584144 /* NotificationView.swift */,
 				96CB49812A1869A600584144 /* ComplicationController.swift */,
@@ -439,6 +455,7 @@
 					};
 					96CB49682A1869A500584144 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1400;
 					};
 					96CB49732A1869A600584144 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -539,8 +556,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96CB494B2A18699B00584144 /* ContentView.swift in Sources */,
+				96C85D5D2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */,
+				96C85D5F2A18CD9400D5AAB4 /* ContentView.swift in Sources */,
 				96CB49492A18699B00584144 /* __Things_ToDoApp.swift in Sources */,
+				96C85D5B2A18CD9400D5AAB4 /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +585,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CB497E2A1869A600584144 /* NotificationController.swift in Sources */,
-				96CB497C2A1869A600584144 /* ContentView.swift in Sources */,
+				96C85D602A18CD9400D5AAB4 /* ContentView.swift in Sources */,
+				96C85D5C2A18CD9400D5AAB4 /* Counter.swift in Sources */,
+				96C85D5E2A18CD9400D5AAB4 /* SessionDelegator.swift in Sources */,
 				96CB49822A1869A600584144 /* ComplicationController.swift in Sources */,
 				96CB497A2A1869A600584144 /* __Things_ToDoApp.swift in Sources */,
 				96CB49802A1869A600584144 /* NotificationView.swift in Sources */,
@@ -808,6 +829,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8V59PTG8G3;
@@ -816,12 +838,19 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "3 Things ToDo WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Freedom.--Things-ToDo";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/3 Things ToDo WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 8.3;
@@ -834,6 +863,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8V59PTG8G3;
@@ -842,12 +872,18 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "3 Things ToDo WatchKit App";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "Freedom.--Things-ToDo";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Freedom.--Things-ToDo.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Shared/3 Things ToDo WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
