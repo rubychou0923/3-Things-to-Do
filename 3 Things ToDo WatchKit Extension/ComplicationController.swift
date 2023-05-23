@@ -6,7 +6,7 @@
 //
 
 import ClockKit
-
+import WatchConnectivity
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
 
@@ -43,24 +43,29 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        // Call the handler with the current timeline entry
-        print(ContentView().ToDo1)
-        print(ContentView().ToDo2)
-        print(ContentView().ToDo3)
+        let userDefault = UserDefaults()
         
+        // Call the handler with the current timeline entry
+        var Todo1 = userDefault.value(forKey: "Todo1") as! String
+        var Todo2 = userDefault.value(forKey: "Todo2") as! String
+        var Todo3 = userDefault.value(forKey: "Todo3") as! String
+        
+
         switch complication.family {
         case .graphicCorner:
-            let template = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: ContentView().ToDo1), line2TextProvider: CLKSimpleTextProvider(text: ContentView().ToDo2))
+            let template = CLKComplicationTemplateGraphicCornerStackText(
+                innerTextProvider: CLKSimpleTextProvider(text:Todo1),
+                outerTextProvider: CLKSimpleTextProvider(text: Todo2))
             handler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template))
         case .circularSmall:
             let template = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: "靠主!"), line2TextProvider: CLKSimpleTextProvider(text: "堅持！"))
             handler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template))
         case .graphicCircular:
-            let template = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: ContentView().ToDo1), line2TextProvider: CLKSimpleTextProvider(text: ContentView().ToDo2))
+            let template = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: Todo1), line2TextProvider: CLKSimpleTextProvider(text: Todo2))
             handler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template))
         case .graphicBezel:
-            let templateInner = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: ContentView().ToDo2), line2TextProvider: CLKSimpleTextProvider(text: ContentView().ToDo3))
-            let template = CLKComplicationTemplateGraphicBezelCircularText(circularTemplate:templateInner, textProvider: CLKSimpleTextProvider(text:ContentView().ToDo1))
+            let templateInner =     CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: Todo2), line2TextProvider: CLKSimpleTextProvider(text: Todo3))
+            let template = CLKComplicationTemplateGraphicBezelCircularText(circularTemplate:templateInner, textProvider: CLKSimpleTextProvider(text: Todo1))
             handler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template))
         default:
             let template = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: "謹守"), line2TextProvider: CLKSimpleTextProvider(text: "信靠主"))

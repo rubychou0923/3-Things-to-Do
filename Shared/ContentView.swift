@@ -6,15 +6,22 @@
 //
 
 import SwiftUI
-import WatchConnectivity
+
+class Model {
+    static let sharedModel = Model()
+    var Todo1: String!
+    var Todo2: String!
+    var Todo3: String!
+}
+
 
 struct ContentView: View {
     @StateObject var counter = Counter()
-    @State var ToDo1 = ""
-    @State var ToDo2 = ""
-    @State var ToDo3 = ""
-    @State var ToDo4 = ""
-    @State var ToDo5 = ""
+    @State var Todo1 = ""
+    @State var Todo2 = ""
+    @State var Todo3 = ""
+    @State var Todo4 = ""
+    @State var Todo5 = ""
     
     var labelStyle: some LabelStyle {
         #if os(watchOS)
@@ -25,6 +32,7 @@ struct ContentView: View {
     }
     
     var body: some View {
+        /*
         VStack {
             Text("\(counter.count)")
                 .font(.largeTitle)
@@ -42,6 +50,15 @@ struct ContentView: View {
             }
             .font(.headline)
             .labelStyle(labelStyle)
+        }
+         */
+        VStack {
+            TextField("Todo1", text:$counter.Todo1)
+            TextField("Todo1", text:$counter.Todo2)
+            TextField("Todo1", text:$counter.Todo3)
+            Button(action: counter.update) {
+                Label("done", systemImage: "plus.circle.fill")
+            }
         }
     }
 }
