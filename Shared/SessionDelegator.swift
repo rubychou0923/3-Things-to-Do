@@ -7,6 +7,7 @@
 
 import Combine
 import WatchConnectivity
+import ClockKit
 
 
 
@@ -33,10 +34,11 @@ class SessionDelegater: NSObject, WCSessionDelegate {
             
         }
     }
-    
+
     // iOS Protocol comformance
     // Not needed for this demo otherwise
     #if os(iOS)
+    
     func sessionDidBecomeInactive(_ session: WCSession) {
         print("\(#function): activationState = \(session.activationState.rawValue)")
     }

@@ -8,9 +8,12 @@
 import Foundation
 import Combine
 import WatchConnectivity
+import ClockKit
+import SwiftUI
+import os
 
 final class Counter: ObservableObject {
-    static let sharedModel = Counter()
+    static let share = Counter()
     var session: WCSession
     let delegate: WCSessionDelegate
     let subject = PassthroughSubject<Int, Never>()
@@ -33,12 +36,39 @@ final class Counter: ObservableObject {
             .assign(to: &$count)
     }
     
+    
     func update(){
         let userDefault = UserDefaults()
        
         userDefault.setValue(String(Todo1), forKey: "Todo1")
         userDefault.setValue(String(Todo2), forKey: "Todo2")
         userDefault.setValue(String(Todo3), forKey: "Todo3")
+        
+        Counter.share.Todo1=Todo1
+        Counter.share.Todo2=Todo2
+        Counter.share.Todo3=Todo3
+        
+        print(Counter.share.Todo1)
+        print(Counter.share.Todo2)
+        print(Counter.share.Todo3)
+        
+       #if !os(iOS)
+        let server=CLKComplicationServer.sharedInstance()
+        for complication in server.activeComplications ?? [] {
+            server.reloadTimeline ( for : complication)
+        }
+        #endif
+        
+        /*
+        let complicationServer = CLKComplicationServer.sharedInstance()
+
+        if let activeComplications = complicationServer.activeComplications {
+          for complication in activeComplications {
+              // Be selective on what you actually need to reload
+            complicationServer.reloadTimeline(for: complication)
+          }
+        }
+        */
     }
     
     func increment() {
