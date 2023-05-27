@@ -50,6 +50,18 @@ final class Counter: ObservableObject {
             .assign(to: &$Todo3)
     }
     
+    func reset(){
+        Counter.share.Todo1=""
+        Counter.share.Todo2=""
+        Counter.share.Todo3=""
+        
+        #if !os(iOS)
+         let server=CLKComplicationServer.sharedInstance()
+         for complication in server.activeComplications ?? [] {
+             server.reloadTimeline ( for : complication)
+         }
+         #endif
+    }
     
     func update(){
         //let userDefault = UserDefaults()
@@ -84,6 +96,25 @@ final class Counter: ObservableObject {
         }
         */
     }
+    
+    func todo1done()
+    {
+        print("todo1done")
+        Counter.share.Todo1+="完成"
+    }
+    
+    func todo2done()
+    {
+        print("todo2done")
+        Counter.share.Todo2+="完成"
+    }
+    
+    func todo3done()
+    {
+        print("todo3done")
+        Counter.share.Todo3+="完成"
+    }
+    
     
     func increment() {
         count += 1

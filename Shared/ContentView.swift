@@ -40,21 +40,50 @@ struct ContentView: View {
             .labelStyle(labelStyle)
         }
          */
-        VStack {
-            TextField("Todo1", text:$counter.Todo1)
-            TextField("Todo2", text:$counter.Todo2)
-            TextField("Todo3", text:$counter.Todo3)
-            Button(action: counter.update) {
-                Label("done", systemImage: "plus.circle.fill")
+        GeometryReader { metrics in
+            VStack {
+                HStack {
+                    TextField("Todo1", text:$counter.Todo1)
+                        .frame(width: metrics.size.width*0.8)
+                    Button(action: counter.todo1done) {
+                        Text("✓")
+                    }
+                }
+                
+                HStack {
+                    TextField("Todo2", text:$counter.Todo2)
+                        .frame(width: metrics.size.width*0.8)
+                    Button(action: counter.todo2done) {
+                        Text("✓")
+                    }
+                }
+                
+                HStack {
+                    TextField("Todo3", text:$counter.Todo3)
+                        .frame(width: metrics.size.width*0.8)
+                    Button(action: counter.todo3done) {
+                        Text("✓")
+                    }
+                }
+                
+                HStack {
+                    Button(action: counter.update) {
+                        Text("更新")
+                    }.frame(width: metrics.size.width*0.7)
+                    
+                    Button(action: counter.reset) {
+                        Text("重置")
+                    }
+                }
+#if os(iOS)
+                Text("\(counter.Todo1)")
+                    .font(.largeTitle)
+                Text("\(counter.Todo2)")
+                    .font(.largeTitle)
+                Text("\(counter.Todo3)")
+                    .font(.largeTitle)
+#endif
             }
-           #if os(iOS)
-            Text("\(counter.Todo1)")
-                .font(.largeTitle)
-            Text("\(counter.Todo2)")
-                .font(.largeTitle)
-            Text("\(counter.Todo3)")
-                .font(.largeTitle)
-            #endif
         }
     }
 }

@@ -60,15 +60,38 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         // Call the handler with the current timeline entry
 
         logger.debug("-----> getCurrentTimelineEntry <----")
-        print(Counter.share.Todo1)
-        print(Counter.share.Todo2)
-        print(Counter.share.Todo3)
+       // print(Counter.share.Todo1)
+       //  print(Counter.share.Todo2)
+       // print(Counter.share.Todo3)
+        var todos:[String] = [Counter.share.Todo1,Counter.share.Todo2,Counter.share.Todo3]
+        var todos_display:[String] = []
+        var count: Int = 0
+        
+        for todo in todos{
+            print(todo)
+            if todo.contains("完成"){
+                continue
+            }
+            todos_display.append(todo)
+            count = count+1
+        }
     
+    
+        var index: Int = 3-count
+        print(String(count))
+        print(String(index))
+        
+        if(index>0){
+            for _i in 0 ... index-1 {
+                todos_display.append("")
+            }
+        }
+            
         switch complication.family {
         case .graphicCorner:
             let template = CLKComplicationTemplateGraphicCornerStackText(
-                innerTextProvider: CLKSimpleTextProvider(text:Counter.share.Todo2),
-                outerTextProvider: CLKSimpleTextProvider(text: Counter.share.Todo1))
+                innerTextProvider: CLKSimpleTextProvider(text:todos_display[1]),
+                outerTextProvider: CLKSimpleTextProvider(text:todos_display[0]))
             handler(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template))
         case .circularSmall:
             let template = CLKComplicationTemplateGraphicCircularStackText(line1TextProvider: CLKSimpleTextProvider(text: "靠主!"), line2TextProvider: CLKSimpleTextProvider(text: "堅持！"))
