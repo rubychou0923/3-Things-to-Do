@@ -17,40 +17,50 @@ final class Counter: ObservableObject {
     var session: WCSession
     let delegate: WCSessionDelegate
     let subject = PassthroughSubject<Int, Never>()
-    var Todo1 = ""
-    var Todo2 = ""
-    var Todo3 = ""
+    let Todo1Subject = PassthroughSubject<String, Never>()
+    let Todo2Subject = PassthroughSubject<String, Never>()
+    let Todo3Subject = PassthroughSubject<String, Never>()
+    //var Todo1 = ""
+    //var Todo2 = ""
+    //var Todo3 = ""
     var Todo4 = ""
     var Todo5 = ""
     
     @Published private(set) var count: Int = 0
+    @Published var Todo1: String = ""
+    @Published var Todo2: String = ""
+    @Published var Todo3: String = ""
     
     init(session: WCSession = .default) {
-        self.delegate = SessionDelegater(countSubject: subject)
+        self.delegate = SessionDelegater(Todo1Subject: Todo1Subject,
+                                         Todo2Subject: Todo2Subject,
+                                         Todo3Subject: Todo3Subject)
         self.session = session
         self.session.delegate = self.delegate
         self.session.activate()
         
-        subject
+        Todo1Subject
             .receive(on: DispatchQueue.main)
-            .assign(to: &$count)
+            .assign(to: &$Todo1)
+        Todo2Subject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$Todo2)
+        Todo3Subject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$Todo3)
     }
     
     
     func update(){
-        let userDefault = UserDefaults()
+        //let userDefault = UserDefaults()
        
-        userDefault.setValue(String(Todo1), forKey: "Todo1")
-        userDefault.setValue(String(Todo2), forKey: "Todo2")
-        userDefault.setValue(String(Todo3), forKey: "Todo3")
+        //userDefault.setValue(String(Todo1), forKey: "Todo1")
+        //userDefault.setValue(String(Todo2), forKey: "Todo2")
+        //userDefault.setValue(String(Todo3), forKey: "Todo3")
         
         Counter.share.Todo1=Todo1
         Counter.share.Todo2=Todo2
         Counter.share.Todo3=Todo3
-        
-        print(Counter.share.Todo1)
-        print(Counter.share.Todo2)
-        print(Counter.share.Todo3)
         
        #if !os(iOS)
         let server=CLKComplicationServer.sharedInstance()
@@ -59,6 +69,10 @@ final class Counter: ObservableObject {
         }
         #endif
         
+        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3], replyHandler: nil) { error in
+            print(error.localizedDescription)
+        }
+        print("after session.sendMessage")
         /*
         let complicationServer = CLKComplicationServer.sharedInstance()
 

@@ -7,21 +7,9 @@
 
 import SwiftUI
 
-class Model {
-    static let sharedModel = Model()
-    var Todo1: String!
-    var Todo2: String!
-    var Todo3: String!
-}
-
-
 struct ContentView: View {
-    @StateObject var counter = Counter()
-    @State var Todo1 = ""
-    @State var Todo2 = ""
-    @State var Todo3 = ""
-    @State var Todo4 = ""
-    @State var Todo5 = ""
+    @StateObject var counter = Counter.share
+ 
     
     var labelStyle: some LabelStyle {
         #if os(watchOS)
@@ -54,11 +42,19 @@ struct ContentView: View {
          */
         VStack {
             TextField("Todo1", text:$counter.Todo1)
-            TextField("Todo1", text:$counter.Todo2)
-            TextField("Todo1", text:$counter.Todo3)
+            TextField("Todo2", text:$counter.Todo2)
+            TextField("Todo3", text:$counter.Todo3)
             Button(action: counter.update) {
                 Label("done", systemImage: "plus.circle.fill")
             }
+           #if os(iOS)
+            Text("\(counter.Todo1)")
+                .font(.largeTitle)
+            Text("\(counter.Todo2)")
+                .font(.largeTitle)
+            Text("\(counter.Todo3)")
+                .font(.largeTitle)
+            #endif
         }
     }
 }
