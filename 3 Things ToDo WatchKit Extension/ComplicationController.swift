@@ -63,7 +63,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
        // print(Counter.share.Todo1)
        //  print(Counter.share.Todo2)
        // print(Counter.share.Todo3)
-        var todos:[String] = [Counter.share.Todo1,Counter.share.Todo2,Counter.share.Todo3]
+        var todos:[String] = [Counter.share.Todo1,Counter.share.Todo2,Counter.share.Todo3,Counter.share.Todo4,Counter.share.Todo5]
         var todos_display:[String] = []
         var count: Int = 0
         
@@ -77,7 +77,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         }
     
     
-        var index: Int = 3-count
+        var index: Int = 5-count
         print(String(count))
         print(String(index))
         

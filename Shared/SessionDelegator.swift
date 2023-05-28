@@ -16,14 +16,20 @@ class SessionDelegater: NSObject, WCSessionDelegate {
     let Todo1Subject: PassthroughSubject<String, Never>
     let Todo2Subject: PassthroughSubject<String, Never>
     let Todo3Subject: PassthroughSubject<String, Never>
+    let Todo4Subject: PassthroughSubject<String, Never>
+    let Todo5Subject: PassthroughSubject<String, Never>
     
     
     init(Todo1Subject: PassthroughSubject<String, Never>,
          Todo2Subject: PassthroughSubject<String, Never>,
-         Todo3Subject: PassthroughSubject<String, Never>) {
+         Todo3Subject: PassthroughSubject<String, Never>,
+         Todo4Subject: PassthroughSubject<String, Never>,
+         Todo5Subject: PassthroughSubject<String, Never>) {
         self.Todo1Subject = Todo1Subject
         self.Todo2Subject = Todo2Subject
         self.Todo3Subject = Todo3Subject
+        self.Todo4Subject = Todo4Subject
+        self.Todo5Subject = Todo5Subject
         super.init()
     }
     
@@ -51,6 +57,18 @@ class SessionDelegater: NSObject, WCSessionDelegate {
                 Counter.share.Todo2 = Todo3
                 print("Todo3")
                 print(Counter.share.Todo3)
+            }
+            if let Todo4 = message["Todo4"] as? String{
+                self.Todo4Subject.send(Todo4)
+                Counter.share.Todo4 = Todo4
+                print("Todo4")
+                print(Counter.share.Todo4)
+            }
+            if let Todo5 = message["Todo5"] as? String{
+                self.Todo5Subject.send(Todo5)
+                Counter.share.Todo5 = Todo5
+                print("Todo5")
+                print(Counter.share.Todo5)
             }
             
             #if !os(iOS)

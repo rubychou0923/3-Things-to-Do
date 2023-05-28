@@ -20,21 +20,57 @@ final class Counter: ObservableObject {
     let Todo1Subject = PassthroughSubject<String, Never>()
     let Todo2Subject = PassthroughSubject<String, Never>()
     let Todo3Subject = PassthroughSubject<String, Never>()
+    let Todo4Subject = PassthroughSubject<String, Never>()
+    let Todo5Subject = PassthroughSubject<String, Never>()
     //var Todo1 = ""
     //var Todo2 = ""
     //var Todo3 = ""
-    var Todo4 = ""
-    var Todo5 = ""
+
+    let cheerUpString = "感恩 謙卑 正向"
     
     @Published private(set) var count: Int = 0
     @Published var Todo1: String = ""
     @Published var Todo2: String = ""
     @Published var Todo3: String = ""
+    @Published var Todo4: String = ""
+    @Published var Todo5: String = ""
+    
+    @Published var dateString: String = ""
+    
+    func getWeekday() -> String {
+        let calendar = Calendar.current
+        let todayDate = Date()
+        let weekday = calendar.component(.weekday, from: todayDate)
+        let weekdayInt = Int(weekday)
+        
+        switch(weekdayInt){
+        case 1:
+            return "日"
+        case 2:
+            return "一"
+        case 3:
+            return "二"
+        case 4:
+            return "三"
+        case 5:
+            return "四"
+        case 6:
+            return "五"
+        case 7:
+            return "六"
+        default:
+            return ""
+        }
+        
+       // return ""
+    }
     
     init(session: WCSession = .default) {
         self.delegate = SessionDelegater(Todo1Subject: Todo1Subject,
                                          Todo2Subject: Todo2Subject,
-                                         Todo3Subject: Todo3Subject)
+                                         Todo3Subject: Todo3Subject,
+                                         Todo4Subject: Todo4Subject,
+                                         Todo5Subject: Todo5Subject)
         self.session = session
         self.session.delegate = self.delegate
         self.session.activate()
@@ -48,12 +84,31 @@ final class Counter: ObservableObject {
         Todo3Subject
             .receive(on: DispatchQueue.main)
             .assign(to: &$Todo3)
+        Todo4Subject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$Todo4)
+        Todo5Subject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$Todo5)
+        
+        let dateFormatter = DateFormatter()
+        let calendar = Calendar.current
+        let todayDate = Date()
+        let weekday = calendar.component(.weekday, from: todayDate)
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        self.dateString = dateFormatter.string(from: todayDate)
+        let weekdayString = "(" + getWeekday() + ")"
+        self.dateString = self.dateString + weekdayString
     }
     
     func reset(){
         Counter.share.Todo1=""
         Counter.share.Todo2=""
         Counter.share.Todo3=""
+        Counter.share.Todo4=""
+        Counter.share.Todo5=""
         
         #if !os(iOS)
          let server=CLKComplicationServer.sharedInstance()
@@ -61,6 +116,12 @@ final class Counter: ObservableObject {
              server.reloadTimeline ( for : complication)
          }
          #endif
+        
+        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3,"Todo4":Todo4,"Todo5":Todo5], replyHandler: nil) { error in
+            print(error.localizedDescription)
+        }
+        
+        print("reset session.sendMessage")
     }
     
     func update(){
@@ -73,6 +134,8 @@ final class Counter: ObservableObject {
         Counter.share.Todo1=Todo1
         Counter.share.Todo2=Todo2
         Counter.share.Todo3=Todo3
+        Counter.share.Todo4=Todo4
+        Counter.share.Todo5=Todo5
         
        #if !os(iOS)
         let server=CLKComplicationServer.sharedInstance()
@@ -81,10 +144,10 @@ final class Counter: ObservableObject {
         }
         #endif
         
-        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3], replyHandler: nil) { error in
+        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3,"Todo4":Todo4,"Todo5":Todo5], replyHandler: nil) { error in
             print(error.localizedDescription)
         }
-        print("after session.sendMessage")
+        print("update session.sendMessage")
         /*
         let complicationServer = CLKComplicationServer.sharedInstance()
 
@@ -115,6 +178,17 @@ final class Counter: ObservableObject {
         Counter.share.Todo3+="完成"
     }
     
+    func todo4done()
+    {
+        print("todo4done")
+        Counter.share.Todo4+="完成"
+    }
+    
+    func todo5done()
+    {
+        print("todo5done")
+        Counter.share.Todo5+="完成"
+    }
     
     func increment() {
         count += 1
