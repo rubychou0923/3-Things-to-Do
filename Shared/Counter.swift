@@ -12,6 +12,11 @@ import ClockKit
 import SwiftUI
 import os
 
+class todoData : ObservableObject {
+    var Todo: String = ""
+    var isTodo1Finish = false
+}
+
 final class Counter: ObservableObject {
     static let share = Counter()
     var session: WCSession
@@ -22,6 +27,12 @@ final class Counter: ObservableObject {
     let Todo3Subject = PassthroughSubject<String, Never>()
     let Todo4Subject = PassthroughSubject<String, Never>()
     let Todo5Subject = PassthroughSubject<String, Never>()
+    
+    @Published var isTodo1Hidden = false
+    @Published var isTodo2Hidden = false
+    @Published var isTodo3Hidden = false
+    @Published var isTodo4Hidden = false
+    @Published var isTodo5Hidden = false
     //var Todo1 = ""
     //var Todo2 = ""
     //var Todo3 = ""
@@ -103,12 +114,21 @@ final class Counter: ObservableObject {
         self.dateString = self.dateString + weekdayString
     }
     
+    func display_reset(){
+        Counter.share.isTodo1Hidden=false
+        Counter.share.isTodo2Hidden=false
+        Counter.share.isTodo3Hidden=false
+        Counter.share.isTodo4Hidden=false
+        Counter.share.isTodo5Hidden=false
+    }
+    
     func reset(){
         Counter.share.Todo1=""
         Counter.share.Todo2=""
         Counter.share.Todo3=""
         Counter.share.Todo4=""
         Counter.share.Todo5=""
+        
         
         #if !os(iOS)
          let server=CLKComplicationServer.sharedInstance()
@@ -164,29 +184,35 @@ final class Counter: ObservableObject {
     {
         print("todo1done")
         Counter.share.Todo1+="完成"
+        Counter.share.isTodo1Hidden.toggle()
+        print(Counter.share.isTodo1Hidden)
     }
     
     func todo2done()
     {
         print("todo2done")
+        Counter.share.isTodo2Hidden.toggle()
         Counter.share.Todo2+="完成"
     }
     
     func todo3done()
     {
         print("todo3done")
+        Counter.share.isTodo3Hidden.toggle()
         Counter.share.Todo3+="完成"
     }
     
     func todo4done()
     {
         print("todo4done")
+        Counter.share.isTodo4Hidden.toggle()
         Counter.share.Todo4+="完成"
     }
     
     func todo5done()
     {
         print("todo5done")
+        Counter.share.isTodo5Hidden.toggle()
         Counter.share.Todo5+="完成"
     }
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var counter = Counter.share
- 
+
     
     var labelStyle: some LabelStyle {
         #if os(watchOS)
@@ -45,50 +45,69 @@ struct ContentView: View {
                 
 #if !os(iOS)
                 ScrollView(.vertical){
-                    HStack {
-                        TextField("Todo1", text:$counter.Todo1)
-                            .frame(width: metrics.size.width*0.8)
-                        Button(action: counter.todo1done) {
-                            Text("✓")
+                    if !counter.isTodo1Hidden {
+                        HStack {
+                            TextField("Todo1", text:$counter.Todo1)
+                                .frame(width: metrics.size.width*0.8)
+                                .opacity(counter.isTodo1Hidden ? 0.3 : 1)
+                            Button(action: counter.todo1done) {
+                                Text("✓");
+                            }
                         }
                     }
                     
-                    HStack {
-                        TextField("Todo2", text:$counter.Todo2)
-                            .frame(width: metrics.size.width*0.8)
-                        Button(action: counter.todo2done) {
-                            Text("✓")
+                    if !counter.isTodo2Hidden {
+                        HStack {
+                            TextField("Todo2", text:$counter.Todo2)
+                                .frame(width: metrics.size.width*0.8)
+                                .opacity(counter.isTodo2Hidden ? 0.3 : 1)
+                            Button(action: counter.todo2done) {
+                                Text("✓")
+                            }
                         }
                     }
                     
-                    HStack {
-                        TextField("Todo3", text:$counter.Todo3)
-                            .frame(width: metrics.size.width*0.8)
-                        Button(action: counter.todo3done) {
-                            Text("✓")
+                    if !counter.isTodo3Hidden {
+                        HStack {
+                            TextField("Todo3", text:$counter.Todo3)
+                                .frame(width: metrics.size.width*0.8)
+                                .opacity(counter.isTodo3Hidden ? 0.3 : 1)
+                            Button(action: counter.todo3done) {
+                                Text("✓")
+                            }
                         }
                     }
                     
-                    HStack {
-                        TextField("Todo4", text:$counter.Todo4)
-                            .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                        Button(action: counter.todo4done) {
-                            Text("✓")
+                    if !counter.isTodo4Hidden {
+                        HStack {
+                            TextField("Todo4", text:$counter.Todo4)
+                                .frame(width: metrics.size.width*0.8)
+                                .opacity(counter.isTodo4Hidden ? 0.3 : 1)
+                            Button(action: counter.todo4done) {
+                                Text("✓")
+                            }
                         }
                     }
-                    HStack {
-                        TextField("Todo5", text:$counter.Todo5)
-                            .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                        Button(action: counter.todo5done) {
-                            Text("✓")
+                    
+                    if !counter.isTodo5Hidden {
+                        HStack {
+                            TextField("Todo5", text:$counter.Todo5)
+                                .frame(width: metrics.size.width*0.8)
+                                .opacity(counter.isTodo5Hidden ? 0.3 : 1)
+                            Button(action: counter.todo5done) {
+                                Text("✓")
+                            }
                         }
-                    }.padding(10)
+                    }
                 }
                     HStack {
                         Button(action: counter.update) {
                             Text("更新")
-                        }.frame(width: metrics.size.width*0.7)
+                        }.frame(width: metrics.size.width*0.5)
                         
+                        Button(action: counter.display_reset) {
+                            Text("顯示")
+                        }
                         Button(action: counter.reset) {
                             Text("重置")
                         }
@@ -101,43 +120,60 @@ struct ContentView: View {
                 Text("\(counter.dateString)")
                     .font(.largeTitle)
 
-                HStack {
-                    TextField("Todo1", text:$counter.Todo1)
-                        .frame(width: metrics.size.width*0.6, height: metrics.size.height*0.075)
-                    Button(action: counter.todo1done) {
-                        Text("✓")
+                if !counter.isTodo1Hidden {
+                    HStack {
+                        TextField("Todo1", text:$counter.Todo1)
+                            .frame(width: metrics.size.width*0.6, height: metrics.size.height*0.075)
+                            .opacity(counter.isTodo1Hidden ? 0.3 : 1)
+                        Button(action: counter.todo1done) {
+                            Text("✓")
+                        }
                     }
                 }
                 
-                HStack {
-                    TextField("Todo2", text:$counter.Todo2)
-                        .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                    Button(action: counter.todo2done) {
-                        Text("✓")
+                if !counter.isTodo2Hidden {
+                    HStack {
+                        TextField("Todo2", text:$counter.Todo2)
+                            .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
+                            .opacity(counter.isTodo2Hidden ? 0.3 : 1)
+                        Button(action: counter.todo2done) {
+                            Text("✓")
+                        }
                     }
                 }
                 
-                HStack {
-                    TextField("Todo3", text:$counter.Todo3)
-                        .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                    Button(action: counter.todo3done) {
-                        Text("✓")
+                if !counter.isTodo3Hidden {
+                    HStack {
+                        TextField("Todo3", text:$counter.Todo3)
+                            .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
+                            .opacity(counter.isTodo3Hidden ? 0.3 : 1)
+                        Button(action: counter.todo3done) {
+                            Text("✓")
+                        }
                     }
                 }
-                HStack {
-                    TextField("Todo4", text:$counter.Todo4)
-                        .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                    Button(action: counter.todo4done) {
-                        Text("✓")
+                
+                if !counter.isTodo4Hidden {
+                    HStack {
+                        TextField("Todo4", text:$counter.Todo4)
+                            .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
+                            .opacity(counter.isTodo4Hidden ? 0.3 : 1)
+                        Button(action: counter.todo4done) {
+                            Text("✓")
+                        }
                     }
                 }
-                HStack {
-                    TextField("Todo5", text:$counter.Todo5)
-                        .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                    Button(action: counter.todo5done) {
-                        Text("✓")
+                
+                if !counter.isTodo5Hidden {
+                    HStack {
+                        TextField("Todo5", text:$counter.Todo5)
+                            .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
+                            .opacity(counter.isTodo5Hidden ? 0.3 : 1)
+                        Button(action: counter.todo5done) {
+                            Text("✓")
+                        }
                     }
-                }.padding(10)
+                }
                 
                 HStack {
                     Button(action: counter.update) {
@@ -147,9 +183,16 @@ struct ContentView: View {
                     .padding()
                     .background(Color(UIColor(red:55/255,green:112/255,blue:148/255,alpha: 1.00)))
                     .foregroundColor(.white)
-                    .padding(10)
-                    .frame(width: metrics.size.width*0.6, height: metrics.size.height*0.1)
-                    
+                    .frame(width: metrics.size.width*0.4, height: metrics.size.height*0.1)
+ 
+                    Button(action: counter.display_reset) {
+                        Text("顯示")
+                    }
+                    .font(.title)
+                    .padding()
+                    .background(Color(UIColor(red:42/255,green:112/255,blue:42/255,alpha: 1.00)))
+                    .foregroundColor(.white)
+                    .frame(height: metrics.size.height*0.1)
                     
                     Button(action: counter.reset) {
                         Text("重置")
@@ -158,7 +201,6 @@ struct ContentView: View {
                     .padding()
                     .background(Color(UIColor(red:42/255,green:112/255,blue:42/255,alpha: 1.00)))
                     .foregroundColor(.white)
-                    .padding(10)
                     .frame(height: metrics.size.height*0.1)
                 }
 /*
