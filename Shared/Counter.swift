@@ -28,6 +28,13 @@ final class Counter: ObservableObject {
     let Todo4Subject = PassthroughSubject<String, Never>()
     let Todo5Subject = PassthroughSubject<String, Never>()
     
+    let Todo1HiddenSubject = PassthroughSubject<Bool, Never>()
+    let Todo2HiddenSubject = PassthroughSubject<Bool, Never>()
+    let Todo3HiddenSubject = PassthroughSubject<Bool, Never>()
+    let Todo4HiddenSubject = PassthroughSubject<Bool, Never>()
+    let Todo5HiddenSubject = PassthroughSubject<Bool, Never>()
+
+    
     @Published var isTodo1Hidden = false
     @Published var isTodo2Hidden = false
     @Published var isTodo3Hidden = false
@@ -81,7 +88,13 @@ final class Counter: ObservableObject {
                                          Todo2Subject: Todo2Subject,
                                          Todo3Subject: Todo3Subject,
                                          Todo4Subject: Todo4Subject,
-                                         Todo5Subject: Todo5Subject)
+                                         Todo5Subject: Todo5Subject,
+                                         Todo1HiddenSubject: Todo1HiddenSubject,
+                                         Todo2HiddenSubject: Todo2HiddenSubject,
+                                         Todo3HiddenSubject: Todo3HiddenSubject,
+                                         Todo4HiddenSubject: Todo4HiddenSubject,
+                                         Todo5HiddenSubject: Todo5HiddenSubject
+        )
         self.session = session
         self.session.delegate = self.delegate
         self.session.activate()
@@ -101,6 +114,22 @@ final class Counter: ObservableObject {
         Todo5Subject
             .receive(on: DispatchQueue.main)
             .assign(to: &$Todo5)
+        
+        Todo1HiddenSubject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isTodo1Hidden)
+        Todo2HiddenSubject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isTodo2Hidden)
+        Todo3HiddenSubject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isTodo3Hidden)
+        Todo4HiddenSubject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isTodo4Hidden)
+        Todo5HiddenSubject
+            .receive(on: DispatchQueue.main)
+            .assign(to: &$isTodo5Hidden)
         
         let dateFormatter = DateFormatter()
         let calendar = Calendar.current
@@ -128,7 +157,11 @@ final class Counter: ObservableObject {
         Counter.share.Todo3=""
         Counter.share.Todo4=""
         Counter.share.Todo5=""
-        
+        Counter.share.isTodo1Hidden=false
+        Counter.share.isTodo2Hidden=false
+        Counter.share.isTodo3Hidden=false
+        Counter.share.isTodo4Hidden=false
+        Counter.share.isTodo5Hidden=false
         
         #if !os(iOS)
          let server=CLKComplicationServer.sharedInstance()
@@ -137,7 +170,13 @@ final class Counter: ObservableObject {
          }
          #endif
         
-        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3,"Todo4":Todo4,"Todo5":Todo5], replyHandler: nil) { error in
+        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3,"Todo4":Todo4,"Todo5":Todo5,
+                             "isTodo1Hidden": isTodo1Hidden,
+                             "isTodo2Hidden": isTodo2Hidden,
+                             "isTodo3Hidden": isTodo3Hidden,
+                             "isTodo4Hidden": isTodo4Hidden,
+                             "isTodo5Hidden": isTodo5Hidden,
+                            ], replyHandler: nil) { error in
             print(error.localizedDescription)
         }
         
@@ -164,7 +203,13 @@ final class Counter: ObservableObject {
         }
         #endif
         
-        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3,"Todo4":Todo4,"Todo5":Todo5], replyHandler: nil) { error in
+        session.sendMessage(["Todo1": Todo1, "Todo2":Todo2, "Todo3":Todo3,"Todo4":Todo4,"Todo5":Todo5,
+                             "isTodo1Hidden": isTodo1Hidden,
+                             "isTodo2Hidden": isTodo2Hidden,
+                             "isTodo3Hidden": isTodo3Hidden,
+                             "isTodo4Hidden": isTodo4Hidden,
+                             "isTodo5Hidden": isTodo5Hidden,
+                            ], replyHandler: nil) { error in
             print(error.localizedDescription)
         }
         print("update session.sendMessage")
@@ -183,7 +228,7 @@ final class Counter: ObservableObject {
     func todo1done()
     {
         print("todo1done")
-        Counter.share.Todo1+="完成"
+      //  Counter.share.Todo1+="完成"
         Counter.share.isTodo1Hidden.toggle()
         print(Counter.share.isTodo1Hidden)
     }
@@ -192,28 +237,28 @@ final class Counter: ObservableObject {
     {
         print("todo2done")
         Counter.share.isTodo2Hidden.toggle()
-        Counter.share.Todo2+="完成"
+       // Counter.share.Todo2+="完成"
     }
     
     func todo3done()
     {
         print("todo3done")
         Counter.share.isTodo3Hidden.toggle()
-        Counter.share.Todo3+="完成"
+        //Counter.share.Todo3+="完成"
     }
     
     func todo4done()
     {
         print("todo4done")
         Counter.share.isTodo4Hidden.toggle()
-        Counter.share.Todo4+="完成"
+     //   Counter.share.Todo4+="完成"
     }
     
     func todo5done()
     {
         print("todo5done")
         Counter.share.isTodo5Hidden.toggle()
-        Counter.share.Todo5+="完成"
+      //  Counter.share.Todo5+="完成"
     }
     
     func increment() {

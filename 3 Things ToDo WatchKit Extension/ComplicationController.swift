@@ -64,20 +64,30 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
        //  print(Counter.share.Todo2)
        // print(Counter.share.Todo3)
         var todos:[String] = [Counter.share.Todo1,Counter.share.Todo2,Counter.share.Todo3,Counter.share.Todo4,Counter.share.Todo5]
+        var todos_hidden:[Bool] = [Counter.share.isTodo1Hidden,
+                                   Counter.share.isTodo2Hidden,
+                                   Counter.share.isTodo3Hidden,
+                                   Counter.share.isTodo4Hidden,
+                                   Counter.share.isTodo5Hidden,]
         var todos_display:[String] = []
         var count: Int = 0
+        var index: Int = 0
+
         
         for todo in todos{
-            print(todo)
-            if todo.contains("完成"){
+            print(todos[index])
+            if todos_hidden[index] {
+                index = index+1
                 continue
             }
             todos_display.append(todo)
             count = count+1
+            index = index+1
+            
         }
     
     
-        var index: Int = 5-count
+        index=5-count
         print(String(count))
         print(String(index))
         
