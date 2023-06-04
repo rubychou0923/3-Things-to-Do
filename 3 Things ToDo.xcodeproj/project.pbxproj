@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96B620CC2A2C569800F41AB7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96B620CE2A2C569800F41AB7 /* Localizable.strings */; };
 		96CA3A652A18FCEC00173774 /* SessionDelegator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA3A612A18FCEC00173774 /* SessionDelegator.swift */; };
 		96CA3A662A18FCEC00173774 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA3A622A18FCEC00173774 /* Counter.swift */; };
 		96CA3A672A18FCEC00173774 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CA3A642A18FCEC00173774 /* ContentView.swift */; };
@@ -104,6 +105,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		96B620CD2A2C569800F41AB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		96B620D62A2C595700F41AB7 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96C85D572A18CD9300D5AAB4 /* 3 Things ToDo WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "3 Things ToDo WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		96CA3A612A18FCEC00173774 /* SessionDelegator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegator.swift; sourceTree = "<group>"; };
 		96CA3A622A18FCEC00173774 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
@@ -190,6 +193,7 @@
 				96CA3A622A18FCEC00173774 /* Counter.swift */,
 				96CA3A612A18FCEC00173774 /* SessionDelegator.swift */,
 				96C85D572A18CD9300D5AAB4 /* 3 Things ToDo WatchKit App-Bridging-Header.h */,
+				96B620CE2A2C569800F41AB7 /* Localizable.strings */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -479,6 +483,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 96CB493C2A18699B00584144;
 			productRefGroup = 96CB49462A18699B00584144 /* Products */;
@@ -502,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96CB49502A1869A400584144 /* Preview Assets.xcassets in Resources */,
+				96B620CC2A2C569800F41AB7 /* Localizable.strings in Resources */,
 				96CB494D2A1869A400584144 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,11 +654,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		96B620CE2A2C569800F41AB7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96B620CD2A2C569800F41AB7 /* en */,
+				96B620D62A2C595700F41AB7 /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		96CB49A02A1869A800584144 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -712,6 +731,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

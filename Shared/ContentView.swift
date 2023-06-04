@@ -102,14 +102,16 @@ struct ContentView: View {
                 }
                     HStack {
                         Button(action: counter.update) {
-                            Text("更新")
+                            Text("Update")
                         }.frame(width: metrics.size.width*0.5)
                         
                         Button(action: counter.display_reset) {
-                            Text("顯示")
+                            Label("", systemImage: "eye.fill")
                         }
+                        
+                        
                         Button(action: counter.reset) {
-                            Text("重置")
+                            Label("", systemImage: "arrow.counterclockwise")
                         }
                     }
               
@@ -177,7 +179,7 @@ struct ContentView: View {
                 
                 HStack {
                     Button(action: counter.update) {
-                        Text("更新")
+                        Text("Update")
                     }//.alert("更新", isPresented: $presentAlert, actions: { })
                     .font(.title)
                     .padding()
@@ -186,7 +188,7 @@ struct ContentView: View {
                     .frame(width: metrics.size.width*0.4, height: metrics.size.height*0.1)
  
                     Button(action: counter.display_reset) {
-                        Text("顯示")
+                        Text("Show")
                     }
                     .font(.title)
                     .padding()
@@ -195,7 +197,7 @@ struct ContentView: View {
                     .frame(height: metrics.size.height*0.1)
                     
                     Button(action: counter.reset) {
-                        Text("重置")
+                        Text("Reset")
                     }
                     .font(.title)
                     .padding()
