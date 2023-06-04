@@ -83,6 +83,108 @@ final class Counter: ObservableObject {
        // return ""
     }
     
+    func load_data(){
+        let todayDate = Date()
+        let dateFormatter = DateFormatter()
+        let fm = FileManager.default
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let todayFileName = dateFormatter.string(from: todayDate)+".txt"
+        
+        let filePath = NSHomeDirectory() + "/Documents/" + todayFileName
+        let exist = fm.fileExists(atPath: filePath)
+        if !exist {
+            if (fm.createFile(atPath: filePath, contents: nil, attributes: nil)) {
+                print("File created successfully.")
+            } else {
+                print("File not created.")
+            }
+        }else{
+            print(filePath+" existed!, Now read it!")
+            do {
+                let dataInput = try String(contentsOfFile: filePath, encoding: .utf8)
+                let dataArray = dataInput.components(separatedBy: ";")
+                
+                print(dataArray.count)
+                if(dataArray.count>=1){
+                    Todo1 = dataArray[0]
+                }
+                
+                if(dataArray.count>=2){
+                    Todo2 = dataArray[1]
+                }
+                
+                if(dataArray.count>=3){
+                    Todo3 = dataArray[2]
+                }
+                    
+                if(dataArray.count>=4){
+                    Todo4 = dataArray[3]
+                }
+                
+                if(dataArray.count>=5){
+                    Todo5 = dataArray[4]
+                }
+                    
+                print(Todo1)
+                print(Todo2)
+                print(Todo3)
+                print(Todo4)
+                print(Todo5)
+            }catch{
+                print("read file error!")
+            }
+        }
+        
+        
+        do {
+            let discoverPath = NSHomeDirectory()
+            print("discoverPath:"+discoverPath);
+            let files = try fm.contentsOfDirectory(atPath: discoverPath)
+            for file in files {
+                print(file)
+            }
+        } catch {
+            print("error")
+            
+        }
+        
+        do {
+            let discoverPath = NSHomeDirectory()+"/Documents/"
+            print("discoverPath:"+discoverPath);
+            let files = try fm.contentsOfDirectory(atPath: discoverPath)
+            for file in files {
+                print(file)
+            }
+        } catch {
+            print("error")
+        }
+/*
+        
+        // Do any additional setup after loading the view.
+            let path = NSHomeDirectory()
+            let fm = FileManager.default
+            var isDir: ObjCBool = true
+            
+            fm.fileExists(atPath: path, isDirectory: &isDir)
+            if isDir.boolValue {
+                print("此為目錄:"+path)
+            } else {
+                print("此為檔案:"+path)
+            }
+        
+            let todayFile = path+"/"+dateFormatter.string(from: todayDate)+".txt"
+        
+        fm.fileExists(atPath: todayFile, isDirectory: &isDir)
+        if isDir.boolValue {
+            print("此為目錄:"+todayFile)
+        } else {
+            print("此為檔案:"+todayFile)
+        }
+ */
+    }
+    
     init(session: WCSession = .default) {
         self.delegate = SessionDelegater(Todo1Subject: Todo1Subject,
                                          Todo2Subject: Todo2Subject,
@@ -141,6 +243,8 @@ final class Counter: ObservableObject {
         self.dateString = dateFormatter.string(from: todayDate)
         let weekdayString = "(" + getWeekday() + ")"
         self.dateString = self.dateString + weekdayString
+        
+        load_data()
     }
     
     func display_reset(){
@@ -149,6 +253,12 @@ final class Counter: ObservableObject {
         Counter.share.isTodo3Hidden=false
         Counter.share.isTodo4Hidden=false
         Counter.share.isTodo5Hidden=false
+        
+        Counter.share.Todo1=Todo1
+        Counter.share.Todo2=Todo2
+        Counter.share.Todo3=Todo3
+        Counter.share.Todo4=Todo4
+        Counter.share.Todo5=Todo5
     }
     
     func reset(){
@@ -162,6 +272,33 @@ final class Counter: ObservableObject {
         Counter.share.isTodo3Hidden=false
         Counter.share.isTodo4Hidden=false
         Counter.share.isTodo5Hidden=false
+        
+        let todayDate = Date()
+        let dateFormatter = DateFormatter()
+        let fm = FileManager.default
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let todayFileName = dateFormatter.string(from: todayDate)+".txt"
+        let filePath = NSHomeDirectory() + "/Documents/" + todayFileName
+        let exist = fm.fileExists(atPath: filePath)
+        if !exist {
+            if (fm.createFile(atPath: filePath, contents: nil, attributes: nil)) {
+                print("File created successfully.")
+            } else {
+                print("File not created.")
+            }
+        }
+            print(filePath+" existed!")
+            do {
+                let outputString = Counter.share.Todo1+";"+Counter.share.Todo2+";"+Counter.share.Todo3+";"+Counter.share.Todo4+";"+Counter.share.Todo5+";"
+                
+            
+                try outputString.write(toFile: filePath, atomically: true, encoding: .utf8)
+
+            }catch{
+                print("write file error!")
+            }
         
         #if !os(iOS)
          let server=CLKComplicationServer.sharedInstance()
@@ -195,6 +332,43 @@ final class Counter: ObservableObject {
         Counter.share.Todo3=Todo3
         Counter.share.Todo4=Todo4
         Counter.share.Todo5=Todo5
+        
+        let todayDate = Date()
+        let dateFormatter = DateFormatter()
+        let fm = FileManager.default
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Taipei")
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let todayFileName = dateFormatter.string(from: todayDate)+".txt"
+        let filePath = NSHomeDirectory() + "/Documents/" + todayFileName
+        let exist = fm.fileExists(atPath: filePath)
+        if !exist {
+            if (fm.createFile(atPath: filePath, contents: nil, attributes: nil)) {
+                print("File created successfully.")
+            } else {
+                print("File not created.")
+            }
+        }
+            print(filePath+" existed!")
+            do {
+                let outputString = Counter.share.Todo1+";"+Counter.share.Todo2+";"+Counter.share.Todo3+";"+Counter.share.Todo4+";"+Counter.share.Todo5+";"
+                
+            
+                try outputString.write(toFile: filePath, atomically: true, encoding: .utf8)
+
+            }catch{
+                print("write file error!")
+            }
+        
+        // Reading it back from the file
+        var inString = ""
+        do {
+            inString = try String(contentsOfFile: filePath, encoding: .utf8)
+        } catch {
+            assertionFailure("read file faile")
+        }
+        print("Read from the file: \(inString)")
+        
         
        #if !os(iOS)
         let server=CLKComplicationServer.sharedInstance()
