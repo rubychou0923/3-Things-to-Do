@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var counter = Counter.share
-
+    @State private var presentAlert = true
     
     var labelStyle: some LabelStyle {
         #if os(watchOS)
@@ -178,7 +178,7 @@ struct ContentView: View {
                 HStack {
                     Button(action: counter.update) {
                         Text("更新")
-                    }
+                    }//.alert("更新", isPresented: $presentAlert, actions: { })
                     .font(.title)
                     .padding()
                     .background(Color(UIColor(red:55/255,green:112/255,blue:148/255,alpha: 1.00)))
@@ -222,3 +222,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
