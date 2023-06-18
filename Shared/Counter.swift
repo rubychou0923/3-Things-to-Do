@@ -44,7 +44,7 @@ final class Counter: ObservableObject {
     //var Todo2 = ""
     //var Todo3 = ""
 
-    let cheerUpString = "感恩 謙卑 正向"
+    let cheerUpString = "感恩 謙卑 正向 珍惜"
     
     @Published private(set) var count: Int = 0
     @Published var Todo1: String = ""
@@ -106,32 +106,42 @@ final class Counter: ObservableObject {
                 let dataInput = try String(contentsOfFile: filePath, encoding: .utf8)
                 let dataArray = dataInput.components(separatedBy: ";")
                 
+                
                 print(dataArray.count)
+                print(dataArray)
                 if(dataArray.count>=1){
                     Todo1 = dataArray[0]
+                    print("["+dataArray[1]+"]")
+                    isTodo1Hidden = dataArray[1]=="false" ? false:true
                 }
                 
                 if(dataArray.count>=2){
-                    Todo2 = dataArray[1]
+                    Todo2 = dataArray[2]
+                    isTodo2Hidden = dataArray[3]=="false" ? false:true
                 }
                 
                 if(dataArray.count>=3){
-                    Todo3 = dataArray[2]
+                    Todo3 = dataArray[4]
+                    isTodo3Hidden = dataArray[5]=="false" ? false:true
                 }
                     
                 if(dataArray.count>=4){
-                    Todo4 = dataArray[3]
+                    Todo4 = dataArray[6]
+                    isTodo4Hidden = dataArray[7]=="false" ? false:true
                 }
                 
                 if(dataArray.count>=5){
-                    Todo5 = dataArray[4]
+                    Todo5 = dataArray[8]
+                    isTodo5Hidden = dataArray[9]=="false" ? false:true
                 }
                     
-                print(Todo1)
-                print(Todo2)
-                print(Todo3)
-                print(Todo4)
-                print(Todo5)
+                print(Todo1+":"+String(isTodo1Hidden))
+                print(Todo2+":"+String(isTodo2Hidden))
+                print(Todo3+":"+String(isTodo3Hidden))
+                print(Todo4+":"+String(isTodo4Hidden))
+                print(Todo5+":"+String(isTodo5Hidden))
+
+                
             }catch{
                 print("read file error!")
             }
@@ -291,7 +301,7 @@ final class Counter: ObservableObject {
         }
             print(filePath+" existed!")
             do {
-                let outputString = Counter.share.Todo1+";"+Counter.share.Todo2+";"+Counter.share.Todo3+";"+Counter.share.Todo4+";"+Counter.share.Todo5+";"
+                let outputString = Counter.share.Todo1+";"+String(Counter.share.isTodo1Hidden)+";"+Counter.share.Todo2+";"+String(Counter.share.isTodo2Hidden)+";"+Counter.share.Todo3+";"+String(Counter.share.isTodo3Hidden)+";"+Counter.share.Todo4+";"+String(Counter.share.isTodo4Hidden)+";"+Counter.share.Todo5+";"+String(Counter.share.isTodo5Hidden)+";"
                 
             
                 try outputString.write(toFile: filePath, atomically: true, encoding: .utf8)
@@ -321,6 +331,7 @@ final class Counter: ObservableObject {
     }
     
     func update(){
+        print("========== update ==============")
         //let userDefault = UserDefaults()
        
         //userDefault.setValue(String(Todo1), forKey: "Todo1")
@@ -332,6 +343,12 @@ final class Counter: ObservableObject {
         Counter.share.Todo3=Todo3
         Counter.share.Todo4=Todo4
         Counter.share.Todo5=Todo5
+        
+        Counter.share.isTodo1Hidden = isTodo1Hidden
+        Counter.share.isTodo2Hidden = isTodo2Hidden
+        Counter.share.isTodo3Hidden = isTodo3Hidden
+        Counter.share.isTodo4Hidden = isTodo4Hidden
+        Counter.share.isTodo5Hidden = isTodo5Hidden
         
         let todayDate = Date()
         let dateFormatter = DateFormatter()
@@ -351,9 +368,10 @@ final class Counter: ObservableObject {
         }
             print(filePath+" existed!")
             do {
-                let outputString = Counter.share.Todo1+";"+Counter.share.Todo2+";"+Counter.share.Todo3+";"+Counter.share.Todo4+";"+Counter.share.Todo5+";"
+                let outputString = Counter.share.Todo1+";"+String(Counter.share.isTodo1Hidden)+";"+Counter.share.Todo2+";"+String(Counter.share.isTodo2Hidden)+";"+Counter.share.Todo3+";"+String(Counter.share.isTodo3Hidden)+";"+Counter.share.Todo4+";"+String(Counter.share.isTodo4Hidden)+";"+Counter.share.Todo5+";"+String(Counter.share.isTodo5Hidden)+";"
                 
-            
+                
+                print("update:"+outputString)
                 try outputString.write(toFile: filePath, atomically: true, encoding: .utf8)
 
             }catch{
@@ -403,35 +421,41 @@ final class Counter: ObservableObject {
     {
         print("todo1done")
       //  Counter.share.Todo1+="完成"
-        Counter.share.isTodo1Hidden.toggle()
+        isTodo1Hidden.toggle()
+        Counter.share.isTodo1Hidden = isTodo1Hidden
+
         print(Counter.share.isTodo1Hidden)
     }
     
     func todo2done()
     {
         print("todo2done")
-        Counter.share.isTodo2Hidden.toggle()
+        isTodo2Hidden.toggle()
+        Counter.share.isTodo2Hidden = isTodo2Hidden
        // Counter.share.Todo2+="完成"
     }
     
     func todo3done()
     {
         print("todo3done")
-        Counter.share.isTodo3Hidden.toggle()
+        isTodo3Hidden.toggle()
+        Counter.share.isTodo3Hidden = isTodo3Hidden
         //Counter.share.Todo3+="完成"
     }
     
     func todo4done()
     {
         print("todo4done")
-        Counter.share.isTodo4Hidden.toggle()
+        isTodo4Hidden.toggle()
+        Counter.share.isTodo4Hidden = isTodo4Hidden
      //   Counter.share.Todo4+="完成"
     }
     
     func todo5done()
     {
         print("todo5done")
-        Counter.share.isTodo5Hidden.toggle()
+        isTodo5Hidden.toggle()
+        Counter.share.isTodo5Hidden = isTodo5Hidden
       //  Counter.share.Todo5+="完成"
     }
     

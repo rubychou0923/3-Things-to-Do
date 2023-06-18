@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var counter = Counter.share
     @State private var presentAlert = true
+   
+    let done_visiable=0.5
     
     var labelStyle: some LabelStyle {
         #if os(watchOS)
@@ -123,60 +125,60 @@ struct ContentView: View {
                 Text("\(counter.dateString)")
                     .font(.largeTitle)
 
-                if !counter.isTodo1Hidden {
+                //if !counter.isTodo1Hidden {
                     HStack {
                         TextField("Todo1", text:$counter.Todo1)
                             .frame(width: metrics.size.width*0.6, height: metrics.size.height*0.075)
-                            .opacity(counter.isTodo1Hidden ? 0.3 : 1)
+                            .opacity(counter.isTodo1Hidden ? done_visiable : 1)
                         Button(action: counter.todo1done) {
                             Text("✓")
                         }
                     }
-                }
+                //}
                 
-                if !counter.isTodo2Hidden {
+                //if !counter.isTodo2Hidden {
                     HStack {
                         TextField("Todo2", text:$counter.Todo2)
                             .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                            .opacity(counter.isTodo2Hidden ? 0.3 : 1)
+                            .opacity(counter.isTodo2Hidden ? done_visiable : 1)
                         Button(action: counter.todo2done) {
                             Text("✓")
                         }
                     }
-                }
+                //}
                 
-                if !counter.isTodo3Hidden {
+                //if !counter.isTodo3Hidden {
                     HStack {
                         TextField("Todo3", text:$counter.Todo3)
                             .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                            .opacity(counter.isTodo3Hidden ? 0.3 : 1)
+                            .opacity(counter.isTodo3Hidden ? done_visiable : 1)
                         Button(action: counter.todo3done) {
                             Text("✓")
                         }
                     }
-                }
+                //}
                 
-                if !counter.isTodo4Hidden {
+               // if !counter.isTodo4Hidden {
                     HStack {
                         TextField("Todo4", text:$counter.Todo4)
                             .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                            .opacity(counter.isTodo4Hidden ? 0.3 : 1)
+                            .opacity(counter.isTodo4Hidden ? done_visiable : 1)
                         Button(action: counter.todo4done) {
                             Text("✓")
                         }
                     }
-                }
+               // }
                 
-                if !counter.isTodo5Hidden {
+               // if !counter.isTodo5Hidden {
                     HStack {
                         TextField("Todo5", text:$counter.Todo5)
                             .frame(width: metrics.size.width*0.6,height: metrics.size.height*0.075)
-                            .opacity(counter.isTodo5Hidden ? 0.3 : 1)
+                            .opacity(counter.isTodo5Hidden ? done_visiable : 1)
                         Button(action: counter.todo5done) {
                             Text("✓")
                         }
                     }
-                }
+               // }
                 
                 HStack {
                     Button(action: counter.update) {
