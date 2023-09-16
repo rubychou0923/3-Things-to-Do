@@ -119,7 +119,7 @@ struct ContentView: View {
                         }
                     }
 
-                    Button("Request permission")
+                   /* Button("Request permission")
                     {
                          UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
                          if success{
@@ -128,9 +128,21 @@ struct ContentView: View {
                              print(error.localizedDescription)
                             }
                          }
-                    }
+                    }*/
+                    Button(action: counter.register_nofification) {
+                        Text("Schedule Notification")
+                    }/*
                     Button("Schedule Notification")
                     {
+
+                        UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+                        if success{
+                            print("All set")
+                        } else if let error = error {
+                            print(error.localizedDescription)
+                           }
+                        }
+
                         let content = UNMutableNotificationContent()
                         content.title = "Drink some milk!"
                     content.subtitle = "you have 10 sec"
@@ -147,7 +159,7 @@ struct ContentView: View {
                     print("scheduled successfully")
                     }
                     }
-                    }
+                    }*/
                 }
                 
                 
@@ -240,7 +252,8 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .frame(height: metrics.size.height*0.1)
                 }
-                
+
+                /*
                 Button("Request permission")
                 {
                 UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
@@ -251,8 +264,17 @@ struct ContentView: View {
                 }
                 }
                 }
-                Button("Schedule Notification")
+                 */
+                Button("Schedule Notification 10")
                 {
+
+                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+                    if success{
+                    print("All set")
+                    } else if let error = error {
+                    print(error.localizedDescription)
+                    }
+                    }
                 let content = UNMutableNotificationContent()
                 content.title = "Drink some milk!"
                 content.subtitle = "you have 10 sec"
@@ -260,7 +282,7 @@ struct ContentView: View {
                 content.categoryIdentifier = "myCategory"
                 let category = UNNotificationCategory(identifier: "myCategory", actions: [], intentIdentifiers: [], options: [])
                 UNUserNotificationCenter.current().setNotificationCategories([category])
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
                 let request = UNNotificationRequest(identifier: "milk", content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request) { (error) in
                 if let error = error{

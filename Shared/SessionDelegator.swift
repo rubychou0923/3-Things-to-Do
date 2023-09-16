@@ -50,6 +50,8 @@ class SessionDelegater: NSObject, WCSessionDelegate {
         
         super.init()
     }
+
+
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         // Protocol comformance only
