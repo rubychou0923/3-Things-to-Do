@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 struct ContentView: View {
     @StateObject var counter = Counter.share
@@ -102,7 +103,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                }
+                    
                     HStack {
                         Button(action: counter.update) {
                             Text("Update")
@@ -117,7 +118,38 @@ struct ContentView: View {
                             Label("", systemImage: "arrow.counterclockwise")
                         }
                     }
-              
+
+                    Button("Request permission")
+                    {
+                         UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+                         if success{
+                             print("All set")
+                         } else if let error = error {
+                             print(error.localizedDescription)
+                            }
+                         }
+                    }
+                    Button("Schedule Notification")
+                    {
+                        let content = UNMutableNotificationContent()
+                        content.title = "Drink some milk!"
+                    content.subtitle = "you have 10 sec"
+                    content.sound = .default
+                    content.categoryIdentifier = "myCategory"
+                    let category = UNNotificationCategory(identifier: "myCategory", actions: [], intentIdentifiers: [], options: [])
+                    UNUserNotificationCenter.current().setNotificationCategories([category])
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+                    let request = UNNotificationRequest(identifier: "milk", content: content, trigger: trigger)
+                    UNUserNotificationCenter.current().add(request) { (error) in
+                      if let error = error{
+                    print(error.localizedDescription)
+                    }else{
+                    print("scheduled successfully")
+                    }
+                    }
+                    }
+                }
+                
                 
 #else
                 Text("\(counter.cheerUpString)")
@@ -207,6 +239,36 @@ struct ContentView: View {
                     .background(Color(UIColor(red:42/255,green:112/255,blue:42/255,alpha: 1.00)))
                     .foregroundColor(.white)
                     .frame(height: metrics.size.height*0.1)
+                }
+                
+                Button("Request permission")
+                {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+                if success{
+                print("All set")
+                } else if let error = error {
+                print(error.localizedDescription)
+                }
+                }
+                }
+                Button("Schedule Notification")
+                {
+                let content = UNMutableNotificationContent()
+                content.title = "Drink some milk!"
+                content.subtitle = "you have 10 sec"
+                content.sound = .default
+                content.categoryIdentifier = "myCategory"
+                let category = UNNotificationCategory(identifier: "myCategory", actions: [], intentIdentifiers: [], options: [])
+                UNUserNotificationCenter.current().setNotificationCategories([category])
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
+                let request = UNNotificationRequest(identifier: "milk", content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request) { (error) in
+                if let error = error{
+                print(error.localizedDescription)
+                }else{
+                print("scheduled successfully")
+                }
+                }
                 }
 /*
                 Text("\(counter.Todo1)")

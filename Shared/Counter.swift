@@ -94,13 +94,24 @@ final class Counter: ObservableObject {
         
         let filePath = NSHomeDirectory() + "/Documents/" + todayFileName
         let exist = fm.fileExists(atPath: filePath)
+        
         if !exist {
             if (fm.createFile(atPath: filePath, contents: nil, attributes: nil)) {
                 print("File created successfully.")
             } else {
                 print("File not created.")
             }
+            do {
+                let outputString = " ; ; ; ; ; ; ; ; ; ;"
+
+                try outputString.write(toFile: filePath, atomically: true, encoding: .utf8)
+
+            }catch{
+                print("write file error!")
+            }
         }else{
+            print(filePath+" existed!")
+
             print(filePath+" existed!, Now read it!")
             do {
                 let dataInput = try String(contentsOfFile: filePath, encoding: .utf8)
